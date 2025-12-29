@@ -11,10 +11,9 @@ dnf install arch-install-scripts bubblewrap dosfstools e2fsprogs gdisk mkosi ope
 python3 -m pip install --user git+https://github.com/systemd/mkosi.git@v23
 git clone https://github.com/leifliddy/asahi-fedora-usb
 cd asahi-fedora-usb
+# Before running the following command check with lsblk the correct device
+./build.sh -d /dev/sda
 ```
-
-Before running the following command check with lsblk the correct device
-`./build.sh -d /dev/sda`
 
 ## U-Boot
 ```
